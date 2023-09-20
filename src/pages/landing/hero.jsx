@@ -1,14 +1,14 @@
-import blue from "../assets/blue.png";
-import bulb from "../assets/bulb.svg";
-import curve from "../assets/curve.png";
-import flare from "../assets/flare.png";
-import pflare from "../assets/pflare.png";
-import metrix from "../assets/metrix.png";
-import chain from "../assets/chain.png";
-import star from "../assets/star.png";
-import starw from "../assets/starw.png";
-import flame from "../assets/flame.png";
-import vr from "../assets/vr.png";
+import blue from "../../assets/blue.png";
+import bulb from "../../assets/bulb.svg";
+import curve from "../../assets/curve.png";
+import flare from "../../assets/flare.png";
+import pflare from "../../assets/pflare.png";
+import metrix from "../../assets/metrix.png";
+import chain from "../../assets/chain.png";
+import star from "../../assets/star.png";
+import starw from "../../assets/starw.png";
+import flame from "../../assets/flame.png";
+import vr from "../../assets/vr.png";
 
 function Hero() {
   return (
@@ -52,8 +52,8 @@ function Hero() {
         />
         <p className='lg:text-7xl text-3xl mt-16 lg:mt-0 head leading-10 lg:leading-none text-center lg:text-start'>
           getlinked Tech <br /> Hackathon <span className='text-alt'>1.0 </span>
-          <img src={chain} alt='chain' className='inline lg:h-16 h-8' />
-          <img src={flame} alt='chain' className='flame inline lg:h-16 h-8' />
+          <img src={chain} alt='chain' className='inline lg:h-16 h-6' />
+          <img src={flame} alt='chain' className='flame inline lg:h-16 h-6' />
         </p>
 
         <p className='body my-5 text-center lg:text-start'>

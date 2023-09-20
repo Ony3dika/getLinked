@@ -1,11 +1,11 @@
-import idea from "../assets/idea.png";
-import starpu from "../assets/star pu.png";
-import arrow from "../assets/arrow.png";
-import sata from "../assets/sata gra.png";
+import idea from "../../assets/idea.png";
+import starpu from "../../assets/star pu.png";
+import arrow from "../../assets/arrow.png";
+import sata from "../../assets/sata gra.png";
 
 function Intro() {
   return (
-    <main className='flex lg:flex-row flex-col justify-between py-10 container mx-auto px-10 lg:px-24 border-white/[18%] border-b-[1.5px]'>
+    <main className='flex lg:flex-row flex-col justify-between py-10 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'>
       <section className='lg:basis-[48%] flex justify-center relative basis-full'>
         <img
           src={sata}
@@ -42,13 +42,14 @@ function Intro() {
           <p className='body lg:text-base text-[13px] font-normal text-center lg:text-start mt-5 leading-7 lg:leading-9'>
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as <br className='lg:block hidden' /> day: to shape the
-            future. Whether you're a coding genius, a{" "}
+            future. Whether you&apos;re a coding genius, a{" "}
             <br className='lg:block hidden' /> design maverick, or a concept
-            wizard, you'll have the chance to transform{" "}
+            wizard, you&apos;ll have the chance to transform{" "}
             <br className='lg:block hidden' /> your ideas into reality. Solving
             real-world problems, pushing the boundaries of technology, and
             creating solutions that can change the world,{" "}
-            <br className='lg:block hidden' /> that's what we're all about!
+            <br className='lg:block hidden' /> that&apos;s what we&apos;re all
+            about!
           </p>
         </article>
       </section>
