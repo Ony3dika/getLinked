@@ -1,30 +1,31 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import menu from "../assets/menu.png";
 import close from "../assets/close.png";
 
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const navItems = [
-    { name: "Timeline" },
-    { name: "Overview" },
-    { name: "FAQs" },
-    { name: "Contact" },
+    { name: "Timeline", link: "/" },
+    { name: "Overview", link: "/" },
+    { name: "FAQs", link: "/" },
+    { name: "Contact", link: "/contact" },
   ];
 
   return (
     <nav className='border-white/[18%] sticky top-0 bg-main z-50 border-b-[1.5px]'>
       <div className='flex lg:h-24 h-20 pt-6 pb-2 items-center justify-between lg:justify-normal container mx-auto lg:px-24 px-10'>
         <section className='lg:basis-2/5'>
-          <p className='head lg:text-3xl text-xl'>
+          <Link to={"/"} className='head lg:text-3xl text-xl'>
             get<span className='text-alt'>linked</span>
-          </p>
+          </Link>
         </section>
 
         <section className='lg:flex hidden justify-between basis-2/5'>
           {navItems.map((item, index) => (
-            <a href='#' key={index} className='body text-base'>
+            <Link to={item.link} key={index} className='body text-base'>
               {item.name}
-            </a>
+            </Link>
           ))}
         </section>
 
@@ -53,7 +54,7 @@ function Navbar() {
                     key={index}
                     className='my-8 body font-semibold'
                   >
-                    <a href='#'>{item.name}</a>
+                    <Link to={item.link}>{item.name}</Link>
                   </div>
                 ))}
               </div>

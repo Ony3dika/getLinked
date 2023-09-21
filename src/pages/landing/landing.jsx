@@ -12,20 +12,20 @@ import Timeline from "./timeline"
 
 function Landing() {
   return (
-    <div className="relative">
-      <Navbar/>
-      <Hero/>
-      <Intro/>
-      <Rules/>
-      <Judge/>
-      <Faq/>
-      <Timeline/>
-      <Prizes/>
-      <Partners/>
-      <Policy/>
-      <Footer/>
+    <div className="relative bg-main min-h-screen text-white">
+      <Navbar />
+      <Hero />
+      <Intro />
+      <Rules />
+      <Judge />
+      <Faq />
+      <Timeline />
+      <Prizes />
+      <Partners />
+      <Policy />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default Landing
