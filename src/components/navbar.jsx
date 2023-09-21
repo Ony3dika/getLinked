@@ -12,7 +12,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className='border-white/[18%] border-b-[1.5px]'>
+    <nav className='border-white/[18%] sticky top-0 bg-main z-50 border-b-[1.5px]'>
       <div className='flex lg:h-24 h-20 pt-6 pb-2 items-center justify-between lg:justify-normal container mx-auto lg:px-24 px-10'>
         <section className='lg:basis-2/5'>
           <p className='head lg:text-3xl text-xl'>
@@ -38,7 +38,7 @@ function Navbar() {
           <img src={menu} alt='menu' onClick={() => setMobileMenu(true)} />
 
           {mobileMenu && (
-            <div className='w-full h-screen border-2 border-sub/40 absolute top-0 right-0 z-50 rounded container mx-auto px-10 bg-main'>
+            <div className='w-full h-screen absolute top-0 right-0 z-50 rounded container mx-auto px-10 bg-main'>
               <div className='flex h-20 justify-end items-center'>
                 <img
                   src={close}

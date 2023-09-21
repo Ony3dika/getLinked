@@ -1,3 +1,4 @@
+import Footer from "../../components/footer"
 import Navbar from "../../components/navbar"
 import Faq from "./faq"
 import Hero from "./hero"
@@ -11,7 +12,7 @@ import Timeline from "./timeline"
 
 function Landing() {
   return (
-    <div>
+    <div className="relative">
       <Navbar/>
       <Hero/>
       <Intro/>
@@ -22,6 +23,7 @@ function Landing() {
       <Prizes/>
       <Partners/>
       <Policy/>
+      <Footer/>
     </div>
   )
 }

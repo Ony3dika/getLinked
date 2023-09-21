@@ -1,9 +1,22 @@
 import safe from "../../assets/safe.png";
 import lock from "../../assets/lock.png";
+import tick from "../../assets/tick.svg";
+import starpu from "../../assets/star pu.png";
+import star from "../../assets/star.png";
 
 function Policy() {
   return (
-    <div className='x-10 lg:px-32 py-16 flex lg:flex-row justify-between flex-col border-white/[18%] border-t-[1.5px]'>
+    <div className='x-10 lg:px-32 py-16 flex lg:flex-row relative justify-between flex-col border-white/[18%] border-t-[1.5px]'>
+      <img
+        src={star}
+        className='lg:h-7 absolute lg:left-1/3 left-2/3 top-10 lg:top-auto h-4'
+        alt='gray star'
+      />
+      <img
+        src={starpu}
+        className='lg:h-7 absolute lg:left-[45%] right-0 top-1/4 h-4'
+        alt='purple star'
+      />
       <section className='lg:basis-1/2 basis-full'>
         <p className='head lg:text-3xl text-xl text-center lg:text-justify leading-7 lg:leading-[42px]'>
           Privacy Policy and
@@ -20,7 +33,7 @@ function Policy() {
           our participant
         </p>
 
-        <div className="flex lg:justify-start justify-center">
+        <div className='flex lg:justify-start justify-center'>
           <article className='lg:px-16 py-8 p-8 border-2 w-[90%] lg:h-full border-alt/50 rounded backdrop-blur-3xl bg-gray-600/10 mt-10'>
             <p className='body leading-7 lg:text-start text-center lg:leading-9 lg:text-base text-[13px] font-normal'>
               At getlinked tech Hackathon 1.0, we value your privacy and are
@@ -37,17 +50,31 @@ function Policy() {
               Here are terms of our Standard License:
             </p>
 
-            <p className='mt-5 body leading-7 lg:leading-9 lg:text-base text-[13px] font-normal'>
-              The Standard License grants you a non-exclusive right to navigate
-              and register for our event
-            </p>
+            <div className='flex items-center'>
+              <img
+                src={tick}
+                className='h-6 w-6 bg-[#2DE100] rounded-full p-1'
+                alt='tick mark'
+              />
+              <p className='mt-5 body ml-3 lg:ml-5 leading-7 lg:leading-9 lg:text-base text-[13px] font-normal'>
+                The Standard License grants you a non-exclusive right to
+                navigate and register for our event
+              </p>
+            </div>
 
-            <p className='mt-5 body leading-7 lg:leading-9 lg:text-base text-[13px] font-normal'>
-              You are licensed to use the item available at any free source
-              sites, for your project developement
-            </p>
+            <div className='flex items-center'>
+              <img
+                src={tick}
+                className='h-6 w-6 bg-[#2DE100] rounded-full p-1'
+                alt='tick mark'
+              />
+              <p className='mt-5 body ml-3 lg:ml-5 leading-7 lg:leading-9 lg:text-base text-[13px] font-normal'>
+                You are licensed to use the item available at any free source
+                sites, for your project developement
+              </p>
+            </div>
 
-            <div className='flex lg:justify-start justify-center'>
+            <div className='flex justify-center'>
               <button className=' text-base body bg-gradient-to-r lg:px-10 lg:py-4 px-8 py-2.5 mt-5 lg:mt-10 from-[#903AFF] to-[#FE34B9] rounded'>
                 Read More
               </button>
