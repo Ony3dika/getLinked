@@ -30,9 +30,9 @@ function Navbar() {
         </section>
 
         <section className='basis-1/5 lg:flex hidden justify-end'>
-          <button className='text-base body bg-gradient-to-r px-10 py-3 from-[#903AFF] to-[#FE34B9] rounded'>
+          <Link to={"/register"} className='text-base body bg-gradient-to-r px-10 py-3 from-[#903AFF] to-[#FE34B9] rounded'>
             Register
-          </button>
+          </Link>
         </section>
 
         <div className='lg:hidden block'>

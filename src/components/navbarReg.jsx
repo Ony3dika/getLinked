@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-import back from "../assets/back.svg"
 
-function NavbarAlt() {
+function NavbarReg() {
   const navItems = [
     { name: "Timeline", link: "/" },
     { name: "Overview", link: "/" },
     { name: "FAQs", link: "/" },
     { name: "Contact", link: "/contact" },
   ];
-
   return (
     <nav className='sticky top-0 z-50'>
       <div className='flex lg:h-24 h-20 pt-6 pb-2 items-center backdrop-blur-sm justify-between lg:justify-normal container mx-auto lg:px-24 px-10'>
@@ -17,8 +15,11 @@ function NavbarAlt() {
             get<span className='text-alt'>linked</span>
           </Link>
 
-          <Link to={"/"} className='head lg:hidden block lg:text-3xl text-xl'>
-            <img src={back} className="h-7" alt="back button" />
+          <Link
+            to={"/"}
+            className='head text-alt lg:hidden block lg:text-3xl text-xl'
+          >
+            <p>Register</p>
           </Link>
         </section>
 
@@ -39,7 +40,10 @@ function NavbarAlt() {
         </section>
 
         <section className='basis-1/5 lg:flex hidden justify-end'>
-          <Link to={"/register"} className='text-base body bg-gradient-to-r px-10 py-3 from-[#903AFF] to-[#FE34B9] rounded'>
+          <Link
+            to={"/register"}
+            className='text-base body gradient-border px-10 py-3'
+          >
             Register
           </Link>
         </section>
@@ -48,4 +52,4 @@ function NavbarAlt() {
   );
 }
 
-export default NavbarAlt;
+export default NavbarReg;

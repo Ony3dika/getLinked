@@ -5,7 +5,7 @@ import twitter from "../../assets/twitter.svg";
 
 function Touch() {
   return (
-    <main className='lg:basis-1/2 basis-full items-center lg:flex hidden body'>
+    <main className='lg:basis-1/2 basis-full lg:block pt-16 hidden body'>
       <div>
         <p className='text-3xl text-alt:text-start head text-alt leading-[42px]'>
           Get in touch
