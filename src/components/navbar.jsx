@@ -59,9 +59,9 @@ function Navbar() {
                 ))}
               </div>
 
-              <button className='text-base body bg-gradient-to-r px-12 py-4 mb-24 from-[#903AFF] to-[#FE34B9] rounded'>
+              <Link to={"/register"} className='text-base body bg-gradient-to-r px-12 py-4 mb-24 from-[#903AFF] to-[#FE34B9] rounded'>
                 Register
-              </button>
+              </Link>
             </div>
           )}
         </div>

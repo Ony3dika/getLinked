@@ -36,7 +36,7 @@ function Hero() {
           alt='purple-flare'
         />
         <div className='relative lg:hidden block'>
-          <p className='body text-base lg:text-3xl font-bold mt-8'>
+          <p className='body text-base text-center lg:text-3xl font-bold mt-8'>
             Igniting a Revolution in HR Innovation
           </p>
           <img

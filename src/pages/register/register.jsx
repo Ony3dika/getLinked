@@ -5,11 +5,25 @@ import pflare from "../../assets/pflare.png";
 import starpu from "../../assets/star pu.png";
 import starp from "../../assets/sata gra.png";
 import starw from "../../assets/starw.png";
+import Popup from "./popup";
+import { useState } from "react";
 
 function Register() {
+
+  const [pop, setPop] = useState(false)
+
+  const hidePopUp = ()=>{
+    setPop(false)
+  }
+   const showPopUp = () => {
+     setPop(true);
+   };
   return (
     <main className='relative overflow-y-clip bg-main min-h-screen isolate text-white'>
       <NavbarReg />
+      <div className={`${pop ? "block" : "hidden"}`}>
+        <Popup pop={hidePopUp}/>
+      </div>
       <img
         src={pflare}
         className='absolute lg:-left-44 -left-20 -top-10 -z-10 lg:-top-20'
@@ -34,7 +48,7 @@ function Register() {
         <div className='lg:basis-[40%] basis-full'>
           <img src={designer} alt='designer at work' />
         </div>
-        <Form />
+        <Form pop={showPopUp}/>
       </div>
     </main>
   );
