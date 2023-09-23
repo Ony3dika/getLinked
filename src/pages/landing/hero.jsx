@@ -38,6 +38,7 @@ function Hero() {
 
   return (
     <motion.main
+      id='overview'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2 }}
@@ -114,7 +115,6 @@ function Hero() {
             The countdown has ended!
           </p>
         )}
-     
       </div>
 
       {/* section 2 */}

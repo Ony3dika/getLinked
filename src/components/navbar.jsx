@@ -6,9 +6,9 @@ import close from "../assets/close.png";
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const navItems = [
-    { name: "Timeline", link: "/" },
-    { name: "Overview", link: "/" },
-    { name: "FAQs", link: "/" },
+    { name: "Timeline", link: "#timeline" },
+    { name: "Overview", link: "#overview" },
+    { name: "FAQs", link: "#faq" },
     { name: "Contact", link: "/contact" },
   ];
 
@@ -23,9 +23,9 @@ function Navbar() {
 
         <section className='lg:flex hidden justify-between basis-2/5'>
           {navItems.map((item, index) => (
-            <Link to={item.link} key={index} className='body text-base'>
+            <a href={item.link} key={index} className='body text-base'>
               {item.name}
-            </Link>
+            </a>
           ))}
         </section>
 
@@ -54,7 +54,7 @@ function Navbar() {
                     key={index}
                     className='my-8 body font-semibold'
                   >
-                    <Link to={item.link}>{item.name}</Link>
+                    <a onClick={()=>setMobileMenu(false)} href={item.link}>{item.name}</a>
                   </div>
                 ))}
               </div>

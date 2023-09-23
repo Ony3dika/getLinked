@@ -7,6 +7,7 @@ function Timeline() {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: "30%" }}
+      id="timeline"
       whileInView={{ opacity: 1, translateY: 0 }}
       transition={{ duration: 2 }}
       viewport={{ once: false }}
