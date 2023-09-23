@@ -3,10 +3,10 @@ import back from "../assets/back.svg"
 
 function NavbarAlt() {
   const navItems = [
-    { name: "Timeline", link: "#timeline" },
-    { name: "Overview", link: "#overview" },
-    { name: "FAQs", link: "#faq" },
-    { name: "Contact", link: "/contact" },
+    { name: "Timeline", link: "/" },
+    { name: "Overview", link: "/" },
+    { name: "FAQs", link: "/" },
+    { name: "Contact", link: "#" },
   ];
 
   return (
@@ -24,8 +24,8 @@ function NavbarAlt() {
 
         <section className='lg:flex hidden justify-between basis-2/5'>
           {navItems.map((item, index) => (
-            <a
-              href={item.link}
+            <Link
+              to={item.link}
               key={index}
               className={`body text-base font-normal ${
                 index === 3
@@ -34,7 +34,7 @@ function NavbarAlt() {
               }`}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </section>
 

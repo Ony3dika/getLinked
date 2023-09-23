@@ -9,7 +9,7 @@ function Navbar() {
     { name: "Timeline", link: "#timeline" },
     { name: "Overview", link: "#overview" },
     { name: "FAQs", link: "#faq" },
-    { name: "Contact", link: "/contact" },
+    // { name: "Contact", link: "/contact" },
   ];
 
   return (
@@ -27,10 +27,17 @@ function Navbar() {
               {item.name}
             </a>
           ))}
+
+          <Link to={"/contact"}  className='body text-base'>
+            Contact
+          </Link>
         </section>
 
         <section className='basis-1/5 lg:flex hidden justify-end'>
-          <Link to={"/register"} className='text-base body bg-gradient-to-r px-10 py-3 from-[#903AFF] to-[#FE34B9] rounded'>
+          <Link
+            to={"/register"}
+            className='text-base body bg-gradient-to-r px-10 py-3 from-[#903AFF] to-[#FE34B9] rounded'
+          >
             Register
           </Link>
         </section>
@@ -50,16 +57,24 @@ function Navbar() {
 
               <div>
                 {navItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className='my-8 body font-semibold'
-                  >
-                    <a onClick={()=>setMobileMenu(false)} href={item.link}>{item.name}</a>
+                  <div key={index} className='my-8 body font-semibold'>
+                    <a onClick={() => setMobileMenu(false)} href={item.link}>
+                      {item.name}
+                    </a>
                   </div>
                 ))}
+
+                <div className='my-8 body font-semibold'>
+                  <Link onClick={() => setMobileMenu(false)} to={"/contact"}>
+                    Contact
+                  </Link>
+                </div>
               </div>
 
-              <Link to={"/register"} className='text-base body bg-gradient-to-r px-12 py-4 mb-24 from-[#903AFF] to-[#FE34B9] rounded'>
+              <Link
+                to={"/register"}
+                className='text-base body bg-gradient-to-r px-12 py-4 mb-24 from-[#903AFF] to-[#FE34B9] rounded'
+              >
                 Register
               </Link>
             </div>
