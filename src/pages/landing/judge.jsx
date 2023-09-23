@@ -1,14 +1,17 @@
 import judge from "../../assets/judge.png";
+import { motion } from "framer-motion";
 
 function Judge() {
   return (
-    <div className='flex lg:flex-row flex-col py-10 lg:pb-40 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'>
+    <motion.div
+      initial={{ opacity: 0, translateY: "40%" }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      className='flex lg:flex-row flex-col py-10 lg:pb-40 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'
+    >
       <section className='lg:basis-1/2 flex justify-center items-center basis-full'>
-        <img
-          src={judge}
-          className='lg:h-2/3 h-auto'
-          alt='brain storming duo'
-        />
+        <img src={judge} className='lg:h-2/3 h-auto' alt='brain storming duo' />
       </section>
       <section className='lg:basis-1/2 flex items-center basis-full'>
         <article>
@@ -65,7 +68,7 @@ function Judge() {
           </div>
         </article>
       </section>
-    </div>
+    </motion.div>
   );
 }
 

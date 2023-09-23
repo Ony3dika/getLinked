@@ -3,18 +3,25 @@ import lock from "../../assets/lock.png";
 import tick from "../../assets/tick.svg";
 import starpu from "../../assets/star pu.png";
 import star from "../../assets/star.png";
+import { motion } from "framer-motion";
 
 function Policy() {
   return (
-    <div className='x-10 lg:px-32 py-16 flex lg:flex-row relative justify-between flex-col border-white/[18%] border-t-[1.5px]'>
+    <motion.div
+      initial={{ opacity: 0, translateY: "50%" }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      className='x-10 lg:px-32 py-16 flex lg:flex-row relative justify-between flex-col border-white/[18%] border-t-[1.5px]'
+    >
       <img
         src={star}
-        className='lg:h-7 absolute lg:left-1/3 left-2/3 top-10 lg:top-auto h-4'
+        className='lg:h-7 absolute animate-pulse lg:left-1/3 left-2/3 top-10 lg:top-auto h-4'
         alt='gray star'
       />
       <img
         src={starpu}
-        className='lg:h-7 absolute lg:left-[45%] right-0 top-1/4 h-4'
+        className='lg:h-7 absolute animate-pulse lg:left-[45%] right-0 top-1/4 h-4'
         alt='purple star'
       />
       <section className='lg:basis-1/2 basis-full'>
@@ -91,7 +98,7 @@ function Policy() {
           alt='man standing on lock'
         />
       </section>
-    </div>
+    </motion.div>
   );
 }
 

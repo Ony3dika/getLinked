@@ -13,17 +13,17 @@ function Footer() {
     <footer className='bg-[#120b21] py-10 body relative lg:leading-9 lg:text-base text-[13px] font-normal leading-7'>
       <img
         src={starw}
-        className='lg:h-5 absolute left-[5%] top-1/4 h-4'
+        className='lg:h-5 absolute animate-pulse left-[5%] top-1/4 h-4'
         alt='white star'
       />
       <img
         src={starpu}
-        className='lg:h-5 absolute left-1/2 top-2/4 lg:top-3/4 h-4'
+        className='lg:h-5 absolute animate-pulse left-1/2 top-2/4 lg:top-3/4 h-4'
         alt='purple star'
       />
       <img
         src={starw}
-        className='lg:h-5 absolute right-[10%] bottom-1/3 h-4'
+        className='lg:h-5 absolute animate-pulse right-[10%] bottom-1/3 h-4'
         alt='white star'
       />
       <div className='flex lg:flex-row flex-col container mx-auto px-16 lg:px-32'>

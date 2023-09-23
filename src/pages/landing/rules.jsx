@@ -3,10 +3,17 @@ import ellipse from "../../assets/ellipse.png"
 import star from "../../assets/star.png";
 import starw from "../../assets/starw.png";
 import pflare from "../../assets/pflare.png";
+import { motion } from "framer-motion";
 
 function Rules() {
   return (
-    <div className='flex lg:flex-row flex-col py-10 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'>
+    <motion.section
+      initial={{ opacity: 0, translateY: "40%" }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: false }}
+      className='flex lg:flex-row flex-col py-10 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'
+    >
       <section className='lg:basis-1/2 lg:order-1 overflow-x-clip order-2 flex relative isolate  items-center basis-full'>
         <img
           src={pflare}
@@ -15,12 +22,12 @@ function Rules() {
         />
         <img
           src={star}
-          className='lg:h-6 h-4 absolute top-1/4 left-1/3'
+          className='lg:h-6 h-4 animate-pulse absolute top-1/4 left-1/3'
           alt='star'
         />
         <img
           src={starw}
-          className='absolute lg:left-auto left-1/3 lg:right-0 lg:h-7 h-4 -bottom-6 lg:bottom-1/3'
+          className='absolute animate-ping lg:left-auto left-1/3 lg:right-0 lg:h-7 h-4 -bottom-6 lg:bottom-1/3'
           alt='white-star'
         />
         <article>
@@ -62,7 +69,7 @@ function Rules() {
           alt='purple-flare'
         />
       </section>
-    </div>
+    </motion.section>
   );
 }
 

@@ -32,17 +32,17 @@ function Register() {
       <div className='flex lg:flex-row flex-col container mx-auto relative lg:px-36 lg:py-16 px-10'>
         <img
           src={starp}
-          className='lg:h-7 absolute lg:left-[10%] lg:top-auto top-20 left-[80%] h-4'
+          className='lg:h-7 animate-pulse absolute lg:left-[10%] lg:top-auto top-20 left-[80%] h-4'
           alt='purple star'
         />
         <img
           src={starpu}
-          className='lg:h-7 absolute lg:left-[40%] left-4 top-[80%] lg:top-[50%] h-4'
+          className='lg:h-7 animate-pulse absolute lg:left-[40%] left-4 top-[80%] lg:top-[50%] h-4'
           alt='purple star'
         />
         <img
           src={starw}
-          className='lg:h-7 absolute lg:right-20 right-4 top-[70%] h-4'
+          className='lg:h-7 animate-pulse absolute lg:right-20 right-4 top-[70%] h-4'
           alt='purple star'
         />
         <div className='lg:basis-[40%] basis-full'>

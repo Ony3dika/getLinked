@@ -1,10 +1,17 @@
 import star from "../../assets/star.png";
 import starw from "../../assets/starw.png";
 import starp from "../../assets/star pu.png"
+import { motion } from "framer-motion";
 
 function Timeline() {
   return (
-    <div className='py-16 container mx-auto px-10 lg:px-32'>
+    <motion.div
+      initial={{ opacity: 0, translateY: "30%" }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: false }}
+      className='py-16 container mx-auto px-10 lg:px-32'
+    >
       <p className='head lg:text-3xl text-xl text-center leading-7 lg:leading-[42px]'>
         Timeline
       </p>
@@ -17,12 +24,12 @@ function Timeline() {
       <section className='mt-10 relative'>
         <img
           src={starp}
-          className='lg:h-6 h-4 absolute lg:top-0 -top-6 left-1/4 lg:left-[20%]'
+          className='lg:h-6 h-4 absolute animate-pulse lg:top-0 -top-6 left-1/4 lg:left-[20%]'
           alt='purple star'
         />
         <img
           src={starw}
-          className='lg:h-6 h-2 absolute top-[45%] left-[90%] lg:left-[85%]'
+          className='lg:h-6 h-3 animate-pulse absolute top-[45%] left-[90%] lg:left-[85%]'
           alt='white star'
         />
         <img
@@ -229,7 +236,7 @@ function Timeline() {
           </div>
         </article>
       </section>
-    </div>
+    </motion.div>
   );
 }
 

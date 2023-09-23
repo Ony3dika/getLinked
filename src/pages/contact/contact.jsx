@@ -17,15 +17,15 @@ function Contact() {
         alt='flare'
       />
       <div className='flex lg:flex-row flex-col container mx-auto relative lg:px-36 lg:py-16 px-10'>
-        <img src={starp} className='lg:h-7 absolute lg:left-[10%] left-1/2 h-4' alt='purple star' />
+        <img src={starp} className='lg:h-7 animate-pulse absolute lg:left-[10%] left-1/2 h-4' alt='purple star' />
         <img
           src={starpu}
-          className='lg:h-7 absolute lg:left-[50%] left-8 top-[80%] lg:top-[50%] h-4'
+          className='lg:h-7 absolute animate-pulse lg:left-[50%] left-8 top-[80%] lg:top-[50%] h-4'
           alt='purple star'
         />
         <img
           src={starw}
-          className='lg:h-7 absolute lg:right-20 right-4 top-[70%] h-4'
+          className='lg:h-7 absolute animate-pulse lg:right-20 right-4 top-[70%] h-4'
           alt='purple star'
         />
 

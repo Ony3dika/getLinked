@@ -9,25 +9,56 @@ import star from "../../assets/star.png";
 import starw from "../../assets/starw.png";
 import flame from "../../assets/flame.png";
 import vr from "../../assets/vr.png";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function Hero() {
+  const targetDate = new Date(new Date().getFullYear(), 10, 18);
+
+  const initialTimeDifference = targetDate - new Date();
+
+  const [timeDifference, setTimeDifference] = useState(initialTimeDifference);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const newTimeDifference = targetDate - new Date();
+      setTimeDifference(newTimeDifference);
+      if (newTimeDifference <= 0) {
+        clearInterval(intervalId);
+      }
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [targetDate]);
+
+  const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
+  const seconds = Math.floor((timeDifference / 1000) % 60);
+
   return (
-    <main className='container mx-auto lg:px-24 border-white/[18%] border-b-[1.5px] flex lg:flex-row flex-col px-10'>
+    <motion.main
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      className='container mx-auto lg:px-24 border-white/[18%] border-b-[1.5px] flex lg:flex-row flex-col px-10'
+    >
       {/* section 1 */}
-      <section className='lg:pt-40 isolate relative lg:order-1 order-2  basis-full lg:basis-1/2'>
+      <div className='lg:pt-40 isolate relative lg:order-1 order-2  basis-full lg:basis-1/2'>
         <img
           src={starw}
-          className='absolute lg:left-0 left-24 h-4 lg:top-16 top-20 lg:h-7'
+          className='absolute animate-ping lg:left-0 left-24 h-4 lg:top-16 top-20 lg:h-5'
           alt='white-star'
         />
         <img
           src={star}
-          className='absolute right-0 h-4 lg:top-auto top-20 lg:h-7'
+          className='absolute animate-pulse right-0 h-4 lg:top-auto top-20 lg:h-7'
           alt='gray-star'
         />
         <img
           src={star}
-          className='absolute right-0 lg:right-36 h-4 lg:bottom-40 bottom-32 lg:h-7'
+          className='absolute right-0 animate-pulse lg:right-36 h-4 lg:bottom-40 bottom-32 lg:h-7'
           alt='gray-star'
         />
         <img
@@ -62,17 +93,29 @@ function Hero() {
         </p>
 
         <div className='flex lg:justify-start justify-center'>
-          <button className=' text-base body bg-gradient-to-r px-10 py-3 mt-3 from-[#903AFF] to-[#FE34B9] rounded'>
+          <Link
+            to={"/register"}
+            className=' text-base body bg-gradient-to-r px-10 py-3 mt-3 from-[#903AFF] to-[#FE34B9] rounded'
+          >
             Register
-          </button>
+          </Link>
         </div>
-
-        <p className='num lg:my-16 my-8 text-5xl text-center lg:text-start lg:text-6xl'>
-          00<span className='text-sm'>H</span> 00
-          <span className='text-sm'>M</span> 00
-          <span className='text-sm'>S</span>
-        </p>
-      </section>
+        {timeDifference > 0 ? (
+          <p>
+            <p className='num lg:my-16 my-8 text-5xl text-center lg:text-start lg:text-6xl'>
+              {hours}
+              <span className='text-sm'>H</span> {minutes}
+              <span className='text-sm'>M</span> {seconds}
+              <span className='text-sm'>S</span>
+            </p>
+          </p>
+        ) : (
+          <p className='num lg:my-16 my-8 text-5xl text-center lg:text-start lg:text-6xl'>
+            The countdown has ended!
+          </p>
+        )}
+     
+      </div>
 
       {/* section 2 */}
       <section className='lg:order-2 order-2 lg:overflow-visible lg:overflow-y-clip overflow-hidden basis-full lg:basis-1/2'>
@@ -110,7 +153,7 @@ function Hero() {
           />
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 }
 

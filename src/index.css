@@ -22,3 +22,23 @@
   border-radius: 4px;
   border-image-width: 2px;
 }
+
+::-webkit-scrollbar {
+  width: 0.45em;
+  margin: 10px;
+  background-color:#150e28;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #150e28;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100vw;
+  background-color: #8f3aff77;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #903aff;
+}

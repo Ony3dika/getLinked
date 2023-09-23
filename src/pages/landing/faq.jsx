@@ -6,10 +6,17 @@ import pflare from "../../assets/pflare.png";
 import pimark from "../../assets/pimark.svg";
 import pumark from "../../assets/pumark.svg";
 import casual from "../../assets/casual.png";
+import { motion } from "framer-motion";
 
 function Faq() {
   return (
-    <div className='flex lg:flex-row flex-col py-10 lg:py-32 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'>
+    <motion.div
+      initial={{ opacity: 0, translateY: "60%" }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      className='flex lg:flex-row flex-col py-10 lg:py-32 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'
+    >
       <section className='lg:basis-1/2 overflow-x-clip flex relative isolate  items-center basis-full'>
         <img
           src={pflare}
@@ -18,12 +25,12 @@ function Faq() {
         />
         <img
           src={starpu}
-          className='lg:h-6 h-4 absolute lg:-top-8 -top-4 -left-0'
+          className='lg:h-6 h-4 animate-pulse absolute lg:-top-8 -top-4 -left-0'
           alt='star'
         />
         <img
           src={star}
-          className='absolute lg:left-auto lg:block hidden left-1/3 lg:right-0 lg:h-7 h-4 -bottom-6 lg:bottom-1/3'
+          className='absolute animate-pulse lg:left-auto lg:block hidden left-1/3 lg:right-0 lg:h-7 h-4 -bottom-6 lg:bottom-1/3'
           alt='white-star'
         />
         <article>
@@ -76,28 +83,32 @@ function Faq() {
       <section className='lg:basis-1/2 lg:mt-0 mt-28 flex relative justify-center basis-full'>
         <img
           src={pumark}
-          className='absolute left-8 h-8 lg:h-16'
+          className='absolute left-8 animate-bounce h-8 lg:h-16'
           alt='purple question mark'
         />
         <img
           src={pimark}
-          className='absolute h-12 lg:h-28 -top-20 left-1/3'
+          className='absolute h-12 animate-bounce lg:h-28 -top-20 left-1/3'
           alt='pink question mark'
         />
-        <img src={starp} className='absolute lg:h-7 h-4' alt='pink star' />
+        <img
+          src={starp}
+          className='absolute animate-pulse lg:h-7 h-4'
+          alt='pink star'
+        />
         <img
           src={pumark}
-          className='absolute left-2/3 -top-8 h-8 lg:h-16'
+          className='absolute left-2/3 animate-bounce -top-8 h-8 lg:h-16'
           alt='purple question mark'
         />
         <img src={casual} className='lg:h-auto h-72' alt='man thinking' />
         <img
           src={starw}
-          className='absolute bottom-0 lg:h-7 h-4 right-1/4'
+          className='absolute animate-pulse bottom-0 lg:h-7 h-4 right-1/4'
           alt='white star'
         />
       </section>
-    </div>
+    </motion.div>
   );
 }
 

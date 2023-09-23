@@ -2,14 +2,20 @@ import idea from "../../assets/idea.png";
 import starpu from "../../assets/star pu.png";
 import arrow from "../../assets/arrow.png";
 import sata from "../../assets/sata gra.png";
-
+import { motion } from "framer-motion";
 function Intro() {
   return (
-    <main className='flex lg:flex-row flex-col justify-between py-10 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'>
+    <motion.div
+      initial={{ opacity: 0, translateY:"40%" }}
+      whileInView={{ opacity: 1, translateY:0 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      className='flex lg:flex-row flex-col justify-between py-10 container mx-auto px-10 lg:px-32 border-white/[18%] border-b-[1.5px]'
+    >
       <section className='lg:basis-[48%] flex justify-center relative basis-full'>
         <img
           src={sata}
-          className='absolute lg:left-0 left-10 lg:h-7 h-4 top-1/3'
+          className='absolute animate-pulse lg:left-0 left-10 lg:h-7 h-4 top-1/3'
           alt='pink-star'
         />
         <img
@@ -29,7 +35,7 @@ function Intro() {
       <section className='lg:basis-[48%] flex relative lg:mt-0 mt-10 items-center basis-full'>
         <img
           src={starpu}
-          className='absolute top-8 right-0 h-4 lg:right-16 lg:h-7 lg:top-20'
+          className='absolute animate-ping top-8 right-0 h-4 lg:right-16 lg:h-7 lg:top-20'
           alt='purple-star'
         />
 
@@ -53,7 +59,7 @@ function Intro() {
           </p>
         </article>
       </section>
-    </main>
+    </motion.div>
   );
 }
 
